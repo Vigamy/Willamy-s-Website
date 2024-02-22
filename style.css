@@ -1,0 +1,12 @@
+* {
+  background: rgb(162, 162, 162);
+  margin: 20px auto;
+  text-align: center;
+}
+/* .items {
+  text-align: center;
+} */
+.images {
+  display: block;
+  margin: auto;
+}
