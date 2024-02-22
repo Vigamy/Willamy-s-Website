@@ -24,7 +24,6 @@ const loop = setInterval(function () {
     .bottom.replace("px", "");
 
   if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 80) {
-
     pipe.style.animation = "none";
     pipe.style.left = `${pipePosition}px`;
 
@@ -32,12 +31,17 @@ const loop = setInterval(function () {
     mario.style.bottom = `${marioPosition}px`;
 
     mario.src = "./images/game-over.png";
-    mario.style.width = '75px';
-    mario.style.marginLeft = '60px';
+    mario.style.width = "75px";
+    mario.style.marginLeft = "60px";
 
     clearInterval(loop);
-
   }
 }, 10);
 
 document.addEventListener("keydown", jump);
+document.addEventListener("touchstart", handleTouch);
+
+// Funcionar o jump com o toque
+function handleTouch(event) {
+  jump();
+}
